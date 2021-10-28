@@ -1,13 +1,19 @@
 package LAB61;
 
 public class Animal {
-    public int randomSpeed;
 
-    public Animal(int randomSpeed) {
-        this.randomSpeed = randomSpeed;
+    private int speed;
+
+    public Animal(){
+
     }
 
-    public int getRandomSpeed() {
-        return randomSpeed;
+    public Animal(int speed) {
+        this.speed = speed;
     }
+
+    public int getSpeed() {
+        return speed;
+    }
+
 }
