@@ -4,13 +4,20 @@ import java.security.SecureRandom;
 
 public class Tiger extends Animal {
     private final int TIGER_MAX_SPEED = 100;
+    int speed = new SecureRandom().nextInt(TIGER_MAX_SPEED);
 
-    public void speed(){
-       int speed = new SecureRandom().nextInt(TIGER_MAX_SPEED);
+    public Tiger() {
+
     }
 
-    public boolean flyable = false;
+    public int speed() {
+        return speed;
+    }
 
-
+    @Override
+    public boolean flyable() {
+        return false;
+    }
 
 }
+

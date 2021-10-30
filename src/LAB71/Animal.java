@@ -2,7 +2,10 @@ package LAB71;
 
 public abstract class Animal {
 
-    protected abstract void speed();
-    protected boolean flyable;
+    public Animal() {
+    }
+
+    protected abstract int speed();
+    protected abstract boolean flyable();
 
    }

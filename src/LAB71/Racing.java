@@ -7,9 +7,11 @@ import java.util.List;
 public class Racing {
     public static void main(String[] args) {
         Animal tiger = new Tiger();
+        tiger.speed();
         Animal horse = new Horse();
-        Animal falcon = new FALCON();
-
+        horse.speed();
+        Animal falcon = new falcon();
+        falcon.speed();
 
         List<Animal> animals = Arrays.asList(tiger, horse, falcon);
         List<Animal> applicableAnimals = new ArrayList<>();
@@ -19,14 +21,14 @@ public class Racing {
         }
         Animal winner = null;
         for (Animal animal : applicableAnimals) {
-            System.out.println(animal.getClass().getSimpleName() + " has speed "+ animal.speed());
+            System.out.println(animal.getClass().getSimpleName() + " with speed " + animal.speed());
 
         }
 
         for (Animal animal: applicableAnimals) {
             if(winner == null) {
                 winner = animal;
-            }else if(animal.speep() > winner.speed())
+            }else if(animal.speed() > winner.speed())
                 winner = animal;
 
         }
